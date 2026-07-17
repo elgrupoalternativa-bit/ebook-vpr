@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ebook — Vende Por Tus Redes con Inteligencia Artificial</title>
+  <meta name="description" content="El ebook práctico para emprendedores que quieren usar IA para vender más por WhatsApp e Instagram. Solo $27 USD. Descarga inmediata." />
+  <link rel="icon" type="image/png" href="assets/logo-vpr.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;800;900&family=Open+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg:     #0a0500;
+      --bg2:    #0e0700;
+      --orange: #FF8C00;
+      --gold:   #FFD700;
+      --border: rgba(255,140,0,0.15);
+      --muted:  rgba(255,255,255,0.5);
+      --text:   rgba(255,255,255,0.85);
+    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: white; font-family: 'Open Sans', system-ui, sans-serif; font-size: 17px; line-height: 1.75; overflow-x: hidden; }
+    .syne { font-family: 'Nunito', system-ui, sans-serif; }
+
+    .cta-btn {
+      background: linear-gradient(135deg, #FF8C00, #FFa500);
+      color: #000;
+      font-weight: 800;
+      font-family: 'Open Sans', sans-serif;
+      border: none;
+      cursor: pointer;
+      letter-spacing: 0.06em;
+      transition: transform 0.2s, box-shadow 0.2s;
+      display: inline-block;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+    .cta-btn:hover { transform: translateY(-2px); box-shadow: 0 10px 40px rgba(255,140,0,0.55) !important; }
+
+    .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    .faq-item { border-bottom: 1px solid rgba(255,140,0,0.12); }
+    .faq-q { display: flex; justify-content: space-between; align-items: center; padding: 20px 0; cursor: pointer; font-weight: 700; font-size: 15px; color: rgba(255,255,255,0.85); gap: 16px; user-select: none; }
+    .faq-icon { width: 30px; height: 30px; border-radius: 50%; border: 1px solid rgba(255,140,0,0.4); display: flex; align-items: center; justify-content: center; color: var(--orange); font-size: 20px; flex-shrink: 0; transition: transform 0.3s; line-height: 1; }
+    .faq-item.open .faq-icon { transform: rotate(45deg); }
+    .faq-a { max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.3s; font-size: 15px; color: var(--muted); line-height: 1.8; }
+    .faq-item.open .faq-a { max-height: 300px; padding-bottom: 20px; }
+
+    #particles { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
+
+    @keyframes float-particle { 0% { opacity:0; transform:translateY(0) scale(0); } 20% { opacity:1; } 100% { opacity:0; transform:translateY(-130px) scale(1.5); } }
+    @keyframes fade-in-up { from { opacity:0; transform:translateY(32px); } to { opacity:1; transform:translateY(0); } }
+    @keyframes pulse-dot { 0%,100% { opacity:1; transform:scale(1); } 50% { opacity:0.5; transform:scale(1.5); } }
+    @keyframes glow-pulse { 0%,100% { opacity:0.5; } 50% { opacity:1; } }
+    @keyframes book-float { 0%,100% { transform:perspective(900px) rotateY(-6deg) translateY(0); } 50% { transform:perspective(900px) rotateY(-6deg) translateY(-10px); } }
+
+    section { padding: 90px 24px; }
+    .container { max-width: 1060px; margin: 0 auto; }
+    .badge { display:inline-block; padding:6px 16px; border-radius:6px; font-size:11px; font-weight:700; letter-spacing:0.18em; text-transform:uppercase; margin-bottom:18px; }
+
+    @media (max-width: 768px) {
+      section { padding: 64px 20px; }
+      .hero-grid { flex-direction: column !important; text-align: center; }
+      .hero-img { order: -1; max-width: 260px !important; margin: 0 auto 32px; }
+      .two-col { grid-template-columns: 1fr !important; }
+      .author-grid { flex-direction: column !important; text-align: center; }
+      .price-num { font-size: 72px !important; }
+      .hero-cta { justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ===== NAV ===== -->
+<nav style="position:fixed; top:0; left:0; right:0; z-index:1000; padding:14px 24px; background:rgba(10,5,0,0.85); backdrop-filter:blur(12px); border-bottom:1px solid rgba(255,140,0,0.1); display:flex; justify-content:space-between; align-items:center;">
+  <img src="assets/logo-vpr.png" alt="Vende Por Tus Redes" style="height:36px; object-fit:contain;" />
+  <a href="https://pay.hotmart.com/E40717237S?off=imhzqv67" target="_blank" style="text-decoration:none;">
+    <button class="cta-btn" style="padding:10px 24px; border-radius:8px; font-size:13px;">COMPRAR — $27 USD</button>
+  </a>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section id="hero" style="position:relative; overflow:hidden; padding:140px 24px 90px; background:radial-gradient(ellipse 80% 60% at 50% -5%, rgba(255,140,0,0.13) 0%, transparent 65%), var(--bg);">
+  <div id="particles"></div>
+  <div class="container">
+    <div class="hero-grid" style="display:flex; align-items:center; gap:64px; flex-wrap:wrap;">
+
+      <!-- Text left -->
+      <div style="flex:1; min-width:300px; z-index:2;">
+        <div style="display:inline-flex; align-items:center; gap:9px; background:rgba(255,140,0,0.12); border:1px solid rgba(255,140,0,0.4); padding:8px 20px; border-radius:100px; margin-bottom:30px; animation:fade-in-up 0.5s ease both;">
+          <span style="width:7px;height:7px;border-radius:50%;background:var(--orange);display:inline-block;animation:pulse-dot 1.8s ease-in-out infinite;flex-shrink:0;"></span>
+          <span style="font-size:11px;font-weight:700;letter-spacing:0.14em;color:var(--orange);">EBOOK DIGITAL · DESCARGA INMEDIATA</span>
+        </div>
+
+        <h1 class="syne" style="font-size:clamp(34px,5.5vw,60px); font-weight:800; line-height:1.08; letter-spacing:-0.025em; margin-bottom:24px; animation:fade-in-up 0.6s ease 0.1s both;">
+          Aprende a vender más<br/>
+          por <span style="color:var(--orange);">WhatsApp</span> e <span style="color:var(--orange);">Instagram</span><br/>
+          usando <span style="background:linear-gradient(135deg,#FF8C00,#FFD700);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Inteligencia Artificial</span>
+        </h1>
+
+        <p style="font-size:clamp(15px,2vw,18px); color:var(--muted); line-height:1.8; max-width:540px; margin-bottom:36px; animation:fade-in-up 0.6s ease 0.2s both;">
+          El ebook práctico para emprendedores que quieren usar herramientas reales de IA para crear contenido, atraer clientes y cerrar ventas —
+          <strong style="color:white;">sin ser expertos en tecnología.</strong>
+        </p>
+
+        <div style="animation:fade-in-up 0.6s ease 0.3s both;">
+          <div class="hero-cta" style="display:flex; align-items:center; gap:16px; margin-bottom:16px; flex-wrap:wrap;">
+            <div>
+              <span style="font-size:14px; color:rgba(255,255,255,0.3); text-decoration:line-through; display:block; line-height:1;">$47 USD</span>
+              <span class="syne" style="font-size:52px; font-weight:800; color:var(--gold); line-height:1;">$27 USD</span>
+            </div>
+            <div style="background:rgba(255,215,0,0.12); border:1px solid rgba(255,215,0,0.35); padding:6px 14px; border-radius:100px; font-size:12px; font-weight:700; color:var(--gold); line-height:1.4; text-align:center;">PRECIO DE<br/>LANZAMIENTO</div>
+          </div>
+          <a href="https://pay.hotmart.com/E40717237S?off=imhzqv67" target="_blank" style="text-decoration:none; display:inline-block;">
+            <button class="cta-btn" style="padding:22px 52px; border-radius:14px; font-size:17px; box-shadow:0 0 50px rgba(255,140,0,0.45);">
+              QUIERO EL EBOOK AHORA →
+            </button>
+          </a>
+          <p style="font-size:12px; color:rgba(255,255,255,0.3); margin-top:12px;">Acceso inmediato · Pago seguro · Tarjeta o PayPal</p>
+        </div>
+      </div>
+
+      <!-- Book right -->
+      <div class="hero-img" style="flex-shrink:0; max-width:360px; z-index:2; animation:fade-in-up 0.7s ease 0.25s both;">
+        <div style="position:relative; display:inline-block;">
+          <div style="position:absolute; inset:-40px; background:radial-gradient(circle, rgba(255,140,0,0.28) 0%, transparent 68%); animation:glow-pulse 3s ease-in-out infinite; pointer-events:none;"></div>
+          <img src="assets/portada-ebook.webp" alt="Ebook Vende Por Tus Redes con IA"
+               style="width:100%; border-radius:18px; box-shadow:0 40px 90px rgba(0,0,0,0.7), 0 0 70px rgba(255,140,0,0.22); position:relative; z-index:1; animation:book-float 5s ease-in-out infinite;" />
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== PROBLEMA ===== -->
+<section style="background:var(--bg2); padding:90px 24px;">
+  <div class="container reveal">
+    <div style="text-align:center; margin-bottom:52px;">
+      <span class="badge" style="background:rgba(255,60,60,0.08); border:1px solid rgba(255,60,60,0.2); color:rgba(255,110,110,0.9);">EL PROBLEMA</span>
+      <h2 class="syne" style="font-size:clamp(28px,5vw,50px); font-weight:800; line-height:1.12;">¿Te suena <span style="color:var(--orange);">familiar?</span></h2>
+    </div>
+    <div class="two-col" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px,1fr)); gap:16px;">
+      <div style="background:rgba(255,255,255,0.025); border:1px solid rgba(255,80,80,0.15); border-radius:16px; padding:26px; display:flex; align-items:flex-start; gap:18px;">
+        <span style="font-size:26px; flex-shrink:0; line-height:1;">😔</span>
+        <p style="font-size:15px; color:var(--text); line-height:1.65;">Publicas en Instagram pero <strong style="color:white;">nadie te compra</strong></p>
+      </div>
+      <div style="background:rgba(255,255,255,0.025); border:1px solid rgba(255,80,80,0.15); border-radius:16px; padding:26px; display:flex; align-items:flex-start; gap:18px;">
+        <span style="font-size:26px; flex-shrink:0; line-height:1;">🤔</span>
+        <p style="font-size:15px; color:var(--text); line-height:1.65;"><strong style="color:white;">No sabes qué contenido crear</strong> para atraer clientes</p>
+      </div>
+      <div style="background:rgba(255,255,255,0.025); border:1px solid rgba(255,80,80,0.15); border-radius:16px; padding:26px; display:flex; align-items:flex-start; gap:18px;">
+        <span style="font-size:26px; flex-shrink:0; line-height:1;">😩</span>
+        <p style="font-size:15px; color:var(--text); line-height:1.65;">Respondes WhatsApp todo el día y <strong style="color:white;">aun así no cierras ventas</strong></p>
+      </div>
+      <div style="background:rgba(255,255,255,0.025); border:1px solid rgba(255,80,80,0.15); border-radius:16px; padding:26px; display:flex; align-items:flex-start; gap:18px;">
+        <span style="font-size:26px; flex-shrink:0; line-height:1;">😰</span>
+        <p style="font-size:15px; color:var(--text); line-height:1.65;">Ves que otros usan IA pero <strong style="color:white;">no sabes por dónde empezar</strong></p>
+      </div>
+      <div style="background:rgba(255,255,255,0.025); border:1px solid rgba(255,80,80,0.15); border-radius:16px; padding:26px; display:flex; align-items:flex-start; gap:18px;">
+        <span style="font-size:26px; flex-shrink:0; line-height:1;">😤</span>
+        <p style="font-size:15px; color:var(--text); line-height:1.65;">Tu <strong style="color:white;">competencia avanza más rápido</strong> que tú mientras tú experimentas</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SOLUCIÓN ===== -->
+<section style="background:var(--bg); padding:90px 24px; position:relative; overflow:hidden;">
+  <div style="position:absolute;inset:0;background:radial-gradient(ellipse 60% 50% at 50% 50%,rgba(255,140,0,0.09) 0%,transparent 65%);pointer-events:none;"></div>
+  <div class="container reveal" style="text-align:center;">
+    <span class="badge" style="background:rgba(255,140,0,0.1); border:1px solid rgba(255,140,0,0.3); color:var(--orange);">LA SOLUCIÓN</span>
+    <h2 class="syne" style="font-size:clamp(28px,5vw,50px); font-weight:800; line-height:1.12; margin-bottom:18px;">
+      Existe una forma más <span style="color:var(--orange);">inteligente</span> de vender
+    </h2>
+    <p style="font-size:17px; color:var(--muted); max-width:620px; margin:0 auto 52px; line-height:1.85;">
+      La inteligencia artificial ya no es exclusiva de las grandes empresas. Hoy, cualquier emprendedor puede usarla para crear contenido, atraer clientes y cerrar ventas — y este ebook te muestra exactamente cómo hacerlo desde cero.
+    </p>
+    <div style="position:relative; display:inline-block;">
+      <div style="position:absolute;inset:-50px;background:radial-gradient(circle,rgba(255,140,0,0.32) 0%,transparent 68%);animation:glow-pulse 3s ease-in-out infinite;pointer-events:none;"></div>
+      <img src="assets/portada-ebook.webp" alt="Ebook Vende Por Tus Redes con IA"
+           style="max-width:300px; width:100%; border-radius:18px; box-shadow:0 30px 90px rgba(0,0,0,0.65), 0 0 90px rgba(255,140,0,0.28); position:relative; z-index:1;" />
+    </div>
+  </div>
+</section>
+
+<!-- ===== QUÉ APRENDERÁS ===== -->
+<section style="background:var(--bg2); padding:90px 24px;">
+  <div class="container reveal">
+    <div style="text-align:center; margin-bottom:52px;">
+      <span class="badge" style="background:rgba(255,215,0,0.1); border:1px solid rgba(255,215,0,0.3); color:var(--gold);">CONTENIDO DEL EBOOK</span>
+      <h2 class="syne" style="font-size:clamp(28px,5vw,50px); font-weight:800; line-height:1.12;">Lo que encuentras <span style="color:var(--orange);">dentro</span></h2>
+    </div>
+    <div class="two-col" style="display:grid; grid-template-columns:1fr 1fr; gap:16px;">
+      <div style="background:rgba(255,140,0,0.05); border:1px solid var(--border); border-radius:14px; padding:24px; display:flex; align-items:flex-start; gap:16px;">
+        <span style="color:var(--gold); font-size:20px; flex-shrink:0; margin-top:1px;">✦</span>
+        <p style="font-size:15px; color:var(--text); line-height:1.65;">Qué <strong style="color:white;">herramientas de IA</strong> usar para crear contenido en minutos</p>
+      </div>
+      <div style="background:rgba(255,140,0,0.05); border:1px solid var(--border); border-radius:14px; padding:24px; display:flex; align-items:flex-start; gap:16px;">
+        <span style="color:var(--gold); font-size:20px; flex-shrink:0; margin-top:1px;">✦</span>
+        <p style="font-size:15px; color:var(--text); line-height:1.65;">Cómo escribir <strong style="color:white;">mensajes de venta por WhatsApp</strong> que sí convierten</p>
+      </div>
+      <div style="background:rgba(255,140,0,0.05); border:1px solid var(--border); border-radius:14px; padding:24px; display:flex; align-items:flex-start; gap:16px;">
+        <span style="color:var(--gold); font-size:20px; flex-shrink:0; margin-top:1px;">✦</span>
+        <p style="font-size:15px; color:var(--text); line-height:1.65;"><strong style="color:white;">Estrategia de contenido para Instagram</strong> con ayuda de IA</p>
+      </div>
+      <div style="background:rgba(255,140,0,0.05); border:1px solid var(--border); border-radius:14px; padding:24px; display:flex; align-items:flex-start; gap:16px;">
+        <span style="color:var(--gold); font-size:20px; flex-shrink:0; margin-top:1px;">✦</span>
+        <p style="font-size:15px; color:var(--text); line-height:1.65;">Cómo responder objeciones con <strong style="color:white;">scripts de venta probados</strong></p>
+      </div>
+      <div style="background:rgba(255,140,0,0.05); border:1px solid var(--border); border-radius:14px; padding:24px; display:flex; align-items:flex-start; gap:16px;">
+        <span style="color:var(--gold); font-size:20px; flex-shrink:0; margin-top:1px;">✦</span>
+        <p style="font-size:15px; color:var(--text); line-height:1.65;">Cómo <strong style="color:white;">automatizar el seguimiento</strong> de tus clientes potenciales</p>
+      </div>
+      <div style="background:rgba(255,140,0,0.05); border:1px solid var(--border); border-radius:14px; padding:24px; display:flex; align-items:flex-start; gap:16px;">
+        <span style="color:var(--gold); font-size:20px; flex-shrink:0; margin-top:1px;">✦</span>
+        <p style="font-size:15px; color:var(--text); line-height:1.65;"><strong style="color:white;">Prompt templates</strong> listos para copiar y usar hoy mismo</p>
+      </div>
+      <div style="background:rgba(255,140,0,0.05); border:1px solid var(--border); border-radius:14px; padding:24px; display:flex; align-items:flex-start; gap:16px;">
+        <span style="color:var(--gold); font-size:20px; flex-shrink:0; margin-top:1px;">✦</span>
+        <p style="font-size:15px; color:var(--text); line-height:1.65;">Los <strong style="color:white;">errores más comunes</strong> al usar IA para vender (y cómo evitarlos)</p>
+      </div>
+      <div style="background:rgba(255,140,0,0.05); border:1px solid var(--border); border-radius:14px; padding:24px; display:flex; align-items:flex-start; gap:16px;">
+        <span style="color:var(--gold); font-size:20px; flex-shrink:0; margin-top:1px;">✦</span>
+        <p style="font-size:15px; color:var(--text); line-height:1.65;"><strong style="color:white;">Plan de acción de 7 días</strong> para aplicar todo lo aprendido</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PARA QUIÉN ES ===== -->
+<section style="background:var(--bg); padding:90px 24px;">
+  <div class="container reveal">
+    <div style="text-align:center; margin-bottom:52px;">
+      <h2 class="syne" style="font-size:clamp(28px,5vw,50px); font-weight:800;">¿Este ebook es <span style="color:var(--orange);">para ti?</span></h2>
+    </div>
+    <div class="two-col" style="display:grid; grid-template-columns:1fr 1fr; gap:24px; max-width:820px; margin:0 auto;">
+      <div style="background:rgba(74,222,128,0.04); border:1px solid rgba(74,222,128,0.2); border-radius:20px; padding:36px;">
+        <div style="display:flex; align-items:center; gap:12px; margin-bottom:28px;">
+          <span style="font-size:26px;">✅</span>
+          <h3 class="syne" style="font-size:20px; font-weight:800;">ES para ti si...</h3>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:16px;">
+          <div style="display:flex; gap:12px; align-items:flex-start;">
+            <span style="color:#4ade80; font-weight:800; margin-top:1px; flex-shrink:0;">✓</span>
+            <p style="font-size:14px; color:var(--text); line-height:1.65;">Tienes un negocio y quieres vender más por redes sociales</p>
+          </div>
+          <div style="display:flex; gap:12px; align-items:flex-start;">
+            <span style="color:#4ade80; font-weight:800; margin-top:1px; flex-shrink:0;">✓</span>
+            <p style="font-size:14px; color:var(--text); line-height:1.65;">Usas WhatsApp o Instagram para conseguir clientes</p>
+          </div>
+          <div style="display:flex; gap:12px; align-items:flex-start;">
+            <span style="color:#4ade80; font-weight:800; margin-top:1px; flex-shrink:0;">✓</span>
+            <p style="font-size:14px; color:var(--text); line-height:1.65;">Quieres aprender IA de forma práctica, no teórica</p>
+          </div>
+          <div style="display:flex; gap:12px; align-items:flex-start;">
+            <span style="color:#4ade80; font-weight:800; margin-top:1px; flex-shrink:0;">✓</span>
+            <p style="font-size:14px; color:var(--text); line-height:1.65;">Buscas resultados con herramientas gratuitas o de bajo costo</p>
+          </div>
+        </div>
+      </div>
+      <div style="background:rgba(248,113,113,0.04); border:1px solid rgba(248,113,113,0.2); border-radius:20px; padding:36px;">
+        <div style="display:flex; align-items:center; gap:12px; margin-bottom:28px;">
+          <span style="font-size:26px;">🚫</span>
+          <h3 class="syne" style="font-size:20px; font-weight:800;">NO es para ti si...</h3>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:16px;">
+          <div style="display:flex; gap:12px; align-items:flex-start;">
+            <span style="color:#f87171; font-weight:800; margin-top:1px; flex-shrink:0;">✗</span>
+            <p style="font-size:14px; color:var(--muted); line-height:1.65;">Buscas hacerte rico rápido sin esfuerzo ni aplicación</p>
+          </div>
+          <div style="display:flex; gap:12px; align-items:flex-start;">
+            <span style="color:#f87171; font-weight:800; margin-top:1px; flex-shrink:0;">✗</span>
+            <p style="font-size:14px; color:var(--muted); line-height:1.65;">Ya eres experto en marketing digital avanzado</p>
+          </div>
+          <div style="display:flex; gap:12px; align-items:flex-start;">
+            <span style="color:#f87171; font-weight:800; margin-top:1px; flex-shrink:0;">✗</span>
+            <p style="font-size:14px; color:var(--muted); line-height:1.65;">No tienes intención de aplicar lo que aprendes</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== AUTOR ===== -->
+<section style="background:var(--bg2); padding:90px 24px;">
+  <div class="container reveal">
+    <div class="author-grid" style="display:flex; align-items:center; gap:52px; flex-wrap:wrap; justify-content:center; max-width:860px; margin:0 auto;">
+      <div style="flex-shrink:0; text-align:center;">
+        <div style="width:170px; height:170px; border-radius:50%; border:3px solid var(--orange); padding:4px; margin:0 auto 18px; background:rgba(255,140,0,0.06); display:flex; align-items:center; justify-content:center;">
+          <img src="assets/logo-vpr.png" alt="Ricardo Zarate" style="width:110px; height:110px; object-fit:contain;" />
+        </div>
+        <p class="syne" style="font-size:21px; font-weight:800; color:white; margin-bottom:5px;">Ricardo Zarate</p>
+        <p style="font-size:13px; color:var(--orange); font-weight:700; letter-spacing:0.04em;">Fundador · Vende Por Tus Redes</p>
+      </div>
+      <div style="flex:1; min-width:280px; max-width:540px;">
+        <span class="badge" style="background:rgba(255,140,0,0.1); border:1px solid rgba(255,140,0,0.3); color:var(--orange);">EL AUTOR</span>
+        <p style="font-size:16px; color:var(--muted); line-height:1.85; margin-bottom:28px;">
+          Ricardo ha capacitado a cientos de emprendedores en Colombia y Latinoamérica para usar herramientas digitales e inteligencia artificial en sus negocios. Este ebook es la destilación de lo que enseña en vivo — ahora disponible para que lo apliques a tu ritmo, desde donde estés.
+        </p>
+        <div style="display:flex; gap:16px; flex-wrap:wrap;">
+          <div style="background:rgba(255,140,0,0.08); border:1px solid var(--border); border-radius:14px; padding:18px 26px; text-align:center;">
+            <p class="syne" style="font-size:30px; font-weight:800; color:var(--orange); line-height:1;">+500</p>
+            <p style="font-size:12px; color:var(--muted); margin-top:4px;">Emprendedores capacitados</p>
+          </div>
+          <div style="background:rgba(255,140,0,0.08); border:1px solid var(--border); border-radius:14px; padding:18px 26px; text-align:center;">
+            <p class="syne" style="font-size:30px; font-weight:800; color:var(--orange); line-height:1;">LATAM</p>
+            <p style="font-size:12px; color:var(--muted); margin-top:4px;">Colombia y Latinoamérica</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PRECIO ===== -->
+<section id="precio" style="background:radial-gradient(ellipse 80% 60% at 50% 50%, rgba(255,215,0,0.08) 0%, transparent 65%), var(--bg); padding:100px 24px; position:relative;">
+  <div class="container reveal" style="text-align:center;">
+    <span class="badge" style="background:rgba(255,215,0,0.1); border:1px solid rgba(255,215,0,0.4); color:var(--gold);">PRECIO ESPECIAL DE LANZAMIENTO</span>
+    <h2 class="syne" style="font-size:clamp(28px,5vw,50px); font-weight:800; margin-bottom:40px;">Invierte en tu negocio <span style="color:var(--gold);">hoy</span></h2>
+
+    <div style="max-width:460px; margin:0 auto; background:rgba(255,215,0,0.03); border:2px solid rgba(255,215,0,0.45); border-radius:28px; padding:52px 40px; box-shadow:0 0 100px rgba(255,215,0,0.1), inset 0 0 60px rgba(255,215,0,0.02);">
+      <p style="font-size:16px; color:rgba(255,255,255,0.3); text-decoration:line-through; margin-bottom:4px;">$47 USD</p>
+      <div class="syne price-num" style="font-size:88px; font-weight:800; color:var(--gold); line-height:1; margin-bottom:4px;">$27</div>
+      <p style="font-size:16px; color:var(--muted); margin-bottom:36px;">USD — pago único</p>
+
+      <div style="display:flex; flex-direction:column; gap:14px; margin-bottom:40px; text-align:left;">
+        <div style="display:flex; align-items:center; gap:14px;">
+          <span style="color:var(--gold); font-size:18px;">✦</span>
+          <span style="font-size:15px; color:var(--text);">Descarga inmediata en PDF</span>
+        </div>
+        <div style="display:flex; align-items:center; gap:14px;">
+          <span style="color:var(--gold); font-size:18px;">✦</span>
+          <span style="font-size:15px; color:var(--text);">Actualizaciones gratuitas de por vida</span>
+        </div>
+        <div style="display:flex; align-items:center; gap:14px;">
+          <span style="color:var(--gold); font-size:18px;">✦</span>
+          <span style="font-size:15px; color:var(--text);">Acceso desde cualquier dispositivo</span>
+        </div>
+      </div>
+
+      <a href="https://pay.hotmart.com/E40717237S?off=imhzqv67" target="_blank" style="text-decoration:none; display:block;">
+        <button class="cta-btn" style="width:100%; padding:24px; border-radius:14px; font-size:18px; box-shadow:0 0 60px rgba(255,140,0,0.5);">
+          QUIERO EL EBOOK AHORA →
+        </button>
+      </a>
+      <p style="font-size:12px; color:rgba(255,255,255,0.25); margin-top:14px;">Pago seguro · Hotmart · Tarjeta o PayPal</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== GARANTÍA ===== -->
+<section style="background:var(--bg2); padding:72px 24px;">
+  <div class="container reveal" style="text-align:center; max-width:620px;">
+    <div style="width:76px; height:76px; border-radius:50%; border:2px solid rgba(255,215,0,0.45); background:rgba(255,215,0,0.07); display:flex; align-items:center; justify-content:center; margin:0 auto 22px; font-size:34px;">🛡️</div>
+    <h3 class="syne" style="font-size:clamp(22px,4vw,34px); font-weight:800; color:var(--gold); margin-bottom:16px;">Garantía de 7 días</h3>
+    <p style="font-size:16px; color:var(--muted); line-height:1.85;">
+      Si lees el ebook y sientes que no fue lo que esperabas, <strong style="color:white;">te devolvemos tu dinero.</strong> Sin preguntas, sin complicaciones. Tienes 7 días desde tu compra para solicitarlo directamente por Hotmart.
+    </p>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section style="background:var(--bg); padding:90px 24px;">
+  <div class="container reveal" style="max-width:720px;">
+    <div style="text-align:center; margin-bottom:52px;">
+      <span class="badge" style="background:rgba(255,140,0,0.1); border:1px solid rgba(255,140,0,0.3); color:var(--orange);">PREGUNTAS FRECUENTES</span>
+      <h2 class="syne" style="font-size:clamp(26px,4vw,44px); font-weight:800;">Resolvemos tus <span style="color:var(--orange);">dudas</span></h2>
+    </div>
+    <div id="faq-list">
+      <div class="faq-item">
+        <div class="faq-q"><span>¿En qué formato llega el ebook?</span><div class="faq-icon">+</div></div>
+        <div class="faq-a">El ebook llega en formato PDF de alta calidad. Puedes leerlo en tu computador, celular o tablet — en cualquier dispositivo que abra PDFs. La descarga es inmediata después del pago.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span>¿Necesito experiencia previa en IA?</span><div class="faq-icon">+</div></div>
+        <div class="faq-a">No. El ebook está diseñado para emprendedores sin experiencia técnica. Todo está explicado paso a paso, con herramientas gratuitas o de bajo costo que puedes usar desde hoy mismo.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span>¿Cómo recibo mi compra?</span><div class="faq-icon">+</div></div>
+        <div class="faq-a">Hotmart envía el acceso a tu correo electrónico inmediatamente después de completar el pago. Si no lo ves en los primeros minutos, revisa la carpeta de spam.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span>¿Funciona para cualquier tipo de negocio?</span><div class="faq-icon">+</div></div>
+        <div class="faq-a">Sí. Las estrategias aplican para cualquier negocio que use WhatsApp e Instagram para vender — tiendas físicas, servicios, moda, gastronomía, salud, educación, y más.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA FINAL ===== -->
+<section style="background:radial-gradient(ellipse 80% 60% at 50% 0%, rgba(255,140,0,0.15) 0%, transparent 65%), var(--bg2); padding:110px 24px;">
+  <div class="container reveal" style="text-align:center;">
+    <h2 class="syne" style="font-size:clamp(30px,5.5vw,56px); font-weight:800; line-height:1.1; margin-bottom:22px;">
+      Tu negocio no puede esperar.<br/><span style="color:var(--orange);">La IA tampoco.</span>
+    </h2>
+    <p style="font-size:17px; color:var(--muted); max-width:540px; margin:0 auto 40px; line-height:1.85;">
+      Cada día que pasa sin aplicar estas herramientas, tu competencia se adelanta. Hoy tienes la oportunidad de cambiar eso por solo <strong style="color:white;">$27 USD.</strong>
+    </p>
+    <a href="https://pay.hotmart.com/E40717237S?off=imhzqv67" target="_blank" style="text-decoration:none; display:inline-block;">
+      <button class="cta-btn" style="padding:24px 60px; border-radius:16px; font-size:19px; box-shadow:0 0 70px rgba(255,140,0,0.55);">
+        QUIERO EL EBOOK AHORA →
+      </button>
+    </a>
+    <p style="font-size:13px; color:rgba(255,255,255,0.25); margin-top:16px;">$27 USD · Pago único · Acceso inmediato · Garantía 7 días</p>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer style="padding:52px 24px; border-top:1px solid rgba(255,140,0,0.1);">
+  <div class="container" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:20px;">
+    <div>
+      <img src="assets/logo-vpr.png" alt="Vende Por Tus Redes" style="height:52px; object-fit:contain; display:block; margin-bottom:8px;" />
+      <p style="font-size:13px; color:rgba(255,255,255,0.3);">Con Inteligencia Artificial</p>
+    </div>
+    <div style="text-align:right;">
+      <p style="font-size:13px; color:rgba(255,255,255,0.25);">© 2026 Vende por tus Redes · Todos los derechos reservados</p>
+      <p style="font-size:13px; color:rgba(255,255,255,0.25); margin-top:4px;">Distribuido por Hotmart · Pago 100% seguro</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Particles
+  const container = document.getElementById('particles');
+  function spawnParticle() {
+    const p = document.createElement('div');
+    const size = Math.random() * 4 + 2;
+    const x = Math.random() * 100;
+    const dur = Math.random() * 4 + 3;
+    const delay = Math.random() * 2;
+    p.style.cssText = `position:absolute;bottom:${Math.random()*20}%;left:${x}%;width:${size}px;height:${size}px;border-radius:50%;background:rgba(255,${120+Math.random()*80},0,${0.4+Math.random()*0.4});animation:float-particle ${dur}s ${delay}s ease-out forwards;`;
+    container.appendChild(p);
+    setTimeout(() => p.remove(), (dur + delay) * 1000);
+  }
+  setInterval(spawnParticle, 300);
+
+  // Reveal on scroll
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  // FAQ accordion
+  document.querySelectorAll('.faq-q').forEach(q => {
+    q.addEventListener('click', () => {
+      const item = q.parentElement;
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    });
+  });
+</script>
+</body>
+</html>
