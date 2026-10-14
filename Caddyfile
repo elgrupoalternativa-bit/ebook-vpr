@@ -1,5 +1,22 @@
 :80 {
 	root * /usr/share/caddy
+
+	# Seguridad (14-oct-2026, pedido de Ricardo tras la suplantación desde +58).
+	# - frame-ancestors / X-Frame-Options: nadie puede meter esta página dentro de un sitio falso.
+	# - HSTS: el navegador siempre entra con candado (sin includeSubDomains a propósito).
+	# - NO hay CSP completa: rompería YouTube, fuentes y formularios. Solo la parte de los marcos.
+	# - NO hay "anti-inspección" (bloquear clic derecho/F12): no esconde nada y le quita a la
+	#   gente poder copiar nuestro WhatsApp. Decisión de Ricardo, 14-oct.
+	header {
+		Strict-Transport-Security "max-age=31536000"
+		X-Frame-Options "SAMEORIGIN"
+		Content-Security-Policy "frame-ancestors 'self'"
+		X-Content-Type-Options "nosniff"
+		Referrer-Policy "strict-origin-when-cross-origin"
+		Permissions-Policy "camera=(), microphone=(), geolocation=()"
+		-Server
+	}
+
 	encode gzip
 	try_files {path} /index.html
 	file_server
